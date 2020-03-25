@@ -36,4 +36,3 @@ cacheSolve <- function(mat, ...) {
   mat$setalternado(alt)
   alt
 }
-
