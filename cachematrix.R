@@ -1,12 +1,12 @@
 ##Creation of the matrix. This function creates a special "matrix" object that can cache its inverse.
 makeCacheMatrix <- function(mat = matrix()) {
-  ## Setting the matrix
+## Setting the matrix
   alt <- NULL
   set <- function(y) {
     mat <<- y
     alt <<- NULL
   }
-  ##Getting the matrix
+##Getting the matrix
   get <- function() mat
   setalternado <- function(inverse) alt <<- inverse
   getalternado <- function() alt
@@ -32,7 +32,7 @@ cacheSolve <- function(mat, ...) {
   dados <- mat$get()
 ##calculating the inverse
   alt <- solve(dados)
- ##Setting the inverse
+##Setting the inverse
   mat$setalternado(alt)
   alt
 }
