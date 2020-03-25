@@ -23,16 +23,17 @@ makeCacheMatrix <- function(mat = matrix()) {
 
 ##This function computes the inverse of the special "matrix" returned by makeCacheMatrix above.
 cacheSolve <- function(mat, ...) {
-  ##returning the inverse matrix 
+##returning the inverse matrix 
   alt <- mat$getalternado()
   if(!is.null(alt)) {
     return(alt)
   }
-  ##Getting the matrix
+##Getting the matrix
   dados <- mat$get()
-  ##calculating the inverse
+##calculating the inverse
   alt <- solve(dados)
-  ##Setting the inverse
+ ##Setting the inverse
   mat$setalternado(alt)
   alt
 }
+
